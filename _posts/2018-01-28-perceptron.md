@@ -1,10 +1,10 @@
 ---
-title: "Data Wrangling Project"
-date: 2018-01-28
-tags: [data wrangling, data science, messy data]
+title: "Springboard Project"
+date: 2019-10-01
+tags: [data wrangling, data science, learning]
 header:
   image: "/images/perceptron/percept.jpg"
-excerpt: "Data Wrangling, Data Science, Messy Data"
+excerpt: "Data Wrangling, Data Science, learning"
 mathjax: "true"
 ---
 
@@ -20,7 +20,7 @@ And here's some *italics*
 
 Here's some **bold** text.
 
-What about a [link](https://github.com/dataoptimal)?
+What about a [link](https://github.com/jvhuang1786)?
 
 Here's a bulleted list:
 * First item
