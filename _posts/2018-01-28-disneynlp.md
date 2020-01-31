@@ -45,7 +45,7 @@ californiadisney    | tdr_now
 
 After collection everything ended up in a json file.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="500" height="500">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="1000" height="1000">
 
 
 
@@ -68,6 +68,8 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
                           for d in df['extended_tweet']]
 ```
 
+
+
 ### Exploratory Data Analysis
 
 Below shows a WordCloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
@@ -76,7 +78,7 @@ Below shows a WordCloud visualization of English twitter user data.  The most co
 
 Things like the experience, lottery tickets for the show One Mans Dream was being talked about the most in the Japanese text WordCloud visualization.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/japanese.png" alt="wordcloud, disney, nlp" width="300" height="200">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/japanese.png" alt="wordcloud, disney, nlp" width="700" height="700">
 
 
 ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
@@ -106,7 +108,7 @@ alpha = 0.05
 
 Correlation Matrix
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="600" height="600">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="1000" height="1000">
 
 
 ### Machine Learning
