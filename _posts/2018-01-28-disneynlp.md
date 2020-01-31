@@ -46,13 +46,14 @@ californiadisney    | tdr_now
 
 - Tweepy after collecting from Sept 24th, 2019 to Nov 1st, 2019 throughout the day returned a json file.
 
+*Tweepy Json File*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="1000" height="1000">
 
 
 
 # Data Wrangling/Cleaning
 
-- Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
+### Tweepy separate collected tweets into four separate nested dictionaries.
 
 * extended_tweet
 * extended_entities
@@ -61,7 +62,7 @@ californiadisney    | tdr_now
 * quoted_status
 
 
- - Following code are highlights of data wrangling.
+### Data Wrangling Highlights
 
 *Getting Nested Dictionaries*
 ```python
@@ -206,7 +207,7 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 [Twitter Interactive Influencer Map](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/twittermap.html)
 
  - ScatterText part of Spacy, allows you to look up certain words and shows you in which document in the corpus the word shows up in.  
- - Japanese documenets were compared with English.
+ - Japanese documents were compared with English.
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="3600" height="4000">
@@ -217,20 +218,20 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 
 ## Difference Between Means
 
-* Do Japanese twitter users have more or equal positive sentiment towards the Disney parks than English twitter users?
+### Do Japanese twitter users have more or equal positive sentiment towards the Disney parks than English twitter users?
 
 
-H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
+**H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.**
 
-H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
-
-
-H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
-
-H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
+**H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
 
 
-alpha : 0.05
+**H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.**
+
+**H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
+
+
+**alpha : 0.05**
 
 
 Params:           |Vader Compound Score | Text Blob Polarity
@@ -254,7 +255,7 @@ Japanese          | 0.226               | 0.482
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vader.png" alt="correlation, disney, nlp" width="2000" height="2000">
 
 - Distribution wasn't normal after using the Shapiro Wilk test, however central limit theorem should hold.
-- Ran a Non-Parametric Test to double check.
+- Non-Parametric test Mann-Whitney U was used to validate.
 
 
 ## Mann-Whitney U Test non-parametric distribution test
@@ -279,7 +280,7 @@ Japanese and English twitter users have different sentiment towards Disney on tw
 *Correlation Matrix*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="2000" height="2000">
 
-Correlation is high between favorite count and retweet count.
+- Correlation is high between favorite count and retweet count.
 
 
 # Machine Learning
@@ -429,9 +430,10 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 
 # Model in Action for Chinese New Year Event Tweets
 
-- Below is a link of the model you can use.
+- Below is a link of the sentiment classifier model
 - It will collect twitter data from the Twitter API
 - Clean the data
+- Do some visualization of word count
 - Then run a classifier and topic builder
 
 [Disney NLP Model Start to Finish](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
