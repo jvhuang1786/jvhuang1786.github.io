@@ -8,16 +8,17 @@ mathjax: "true"
 ---
 
 
-**The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.  We will run various ML modes to try to predict user sentiment.  Using Microsoft word translation to translate the text from Japanese twitter users to be able to compare them with English twitter users.**
+##### The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.  We will run various ML modes to try to predict user sentiment.  Using Microsoft word translation to translate the text from Japanese twitter users to be able to compare them with English twitter users.
 
-##### Some of the questions I hope to answer are:
+#### Some of the questions I hope to answer are:
+
 * Do Japanese twitter users have a more positive sentiment towards the Disney Parks vs English users?
 * Is there something at Tokyo Disney resort that users are tweeting more about than Anaheim Disney resort?  
 * Does Oriental Land or other local Japanese businesses do a better job promoting the Disneyland during a Seasonal event on twitter vs their English counterpart?   
 * What cultural differences can we find on twitter between Japanese and English users?
 
 
-##### Data Wrangling/Cleaning
+#### Data Wrangling/Cleaning
 
 Python code block:
 ```python
@@ -28,23 +29,25 @@ Python code block:
       return z
 ```
 
-##### Exploratory Data Analysis
+#### Exploratory Data Analysis
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt=wordcloud, disney, nlp width="300" height="200" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt=scattertext, disney, nlp width="300" height="200" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="300" height="200">
 
-##### Statistics
+#### Statistics
 
 Here's some inline code `x+y`.
+
+#### Machine Learning
 
 ##### Supervised Learning
 
 ##### Unsupervised Learning
 
-##### Findings
+#### Conclusion
 
 
 
