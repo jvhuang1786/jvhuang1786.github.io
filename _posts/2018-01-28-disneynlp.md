@@ -24,11 +24,15 @@ mathjax: "true"
 
 - Tokyo Disney - Spooky Boo Halloween Parade
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tokyo.png" alt="wordcloud, disney, nlp" width="200" height="200">
+<p align="center">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tokyo.png" alt="wordcloud, disney, nlp" width="500" height="500">
+</p>
 
 - Anaheim Disney - Oogie Boogie Bash
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/anaheim.png" alt="wordcloud, disney, nlp" width="200" height="200">
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/anaheim.png" alt="wordcloud, disney, nlp" width="500" height="500">
+</p>
 
 - The following was searched for using Tweepy and the Twitter API
 
@@ -225,18 +229,20 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 ### Do Japanese twitter users have more or equal positive sentiment towards the Disney parks than English twitter users?
 
 
-**H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.**
+*H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.*
 
+<p align="center">
 **H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
+</p>
 
+*H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.*
 
-**H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.**
-
+<p align="center">
 **H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
-
-
+</p>
+<p align="center">
 **alpha : 0.05**
-
+</p>
 
 Params:           |Vader Compound Score | Text Blob Polarity
 ------------------|---------------------|-----------------------
@@ -266,9 +272,13 @@ Japanese          | 0.226               | 0.482
 
 * Tests whether the distributions of two independent samples are equal or not.
 
+
+
+<p align="center">
 H<sub>0</sub> : the distributions of both samples are equal.
 
 H<sub>A</sub> : the distributions of both samples are not equal.
+</p>
 
 Japanese Twitter users vs English Twitter Users
 
