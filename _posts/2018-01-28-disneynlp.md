@@ -7,18 +7,35 @@ excerpt: "Natural Language Processing, Disney, Data Science"
 mathjax: "true"
 ---
 
+### Intro
 
-The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.  We will run various ML modes to try to predict user sentiment.  Using Microsoft word translation to translate the text from Japanese twitter users to be able to compare them with English twitter users.
+The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.
 
-#### Some of the questions I hope to answer are:
+The business use of doing NLP for both Disney resorts would be help Imagineers come up with new decorative themes for the park during seasonal events.  By seeing trends of what people liked and disliked it can help relay information to Disney's business partners of what worked and didn't work.
 
-* Do Japanese twitter users have a more positive sentiment towards the Disney Parks vs English users?
-* Is there something at Tokyo Disney resort that users are tweeting more about than Anaheim Disney resort?  
-* Does Oriental Land or other local Japanese businesses do a better job promoting the Disneyland during a Seasonal event on twitter vs their English counterpart?   
-* What cultural differences can we find on twitter between Japanese and English users?
+So what is an Imagineer you might ask?
+
+Imagineers are in charge of dreaming, designing and building Disney theme parks, attractions, cruise ships, resorts etc. Basically, they’re about live entertainment. They create things you can see and touch and smell, experiences that you can walk right into. They're the ones who create the experience and allow visitors to emerge themselves into the world of Disney.  For example, the new Galaxy Edge now allows Star Wars fans for a place to gather and enjoy themselves on Batuu.  
+
+###Twitter API
+
+Data was collected through the Twitter API from September 24th, 2019 to November 1st, 2019.  Both parks were running their halloween themed festival.  
+
+Tokyo Disney - Spooky Boo Halloween Parade
+
+Anaheim Disney - Oogie Boogie Bash
+
+The following was searched for using Tweepy and the Twitter API
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/hashtags.png" alt="wordcloud, disney, nlp" width="200" height="100">
+
+This was result I ended up with.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="200" height="100">
 
 
-#### Data Wrangling/Cleaning
+
+### Data Wrangling/Cleaning
 
 Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
 
@@ -29,7 +46,7 @@ Tweepy does the strange thing of separating text that you collect into four sepa
 * quoted_status
 
 
- Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well. 
+ Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well.
 
 ```python
 #pull out extended Tweets
@@ -65,13 +82,22 @@ You can also put it inline $$z=x+y$$
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="400" height="400">
 
+
 #### Machine Learning
+
+
+
 
 ##### Supervised Learning
 
+
+
 ##### Unsupervised Learning
 
-#### Conclusion
+
+
+
+#### Model in Action for Chinese New Year Event Tweets
 
 Below is the link to a model you can use for yourself.
 
