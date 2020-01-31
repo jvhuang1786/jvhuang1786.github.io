@@ -9,14 +9,15 @@ Worked in preproduction in the movie industry in China. Connected with famous di
 
 Brazilian Jiu Jitsu enthusiast and world traveler. Traveling the world writing fun stories and coming up with ideas to promote culture.
 
-*Beijing Culture Exchange Art Director of Mulan 2009* 
+*Beijing Culture Exchange Art Director of Mulan 2009*
 <img src="{{ site.url }}{{ site.baseurl }}/images/pop.png" alt="opera, disney, nlp" width="2000" height="2000">
 
-Love the art of storytelling and hearing peoples story. I would love to connect with you or hear your story.  Please send me a Linkedin invite!
+Love the art of storytelling and hearing peoples story. I would love to connect with you or hear your story.  [Send me a Linkedin invite and lets connect](https://www.linkedin.com/in/justinvhuang/)
 
 Graduate of Rutgers Business School, Executive Master in Business Administration, New Jersey, U.S.A. Bachelor of Arts in Economics, Pitzer College, Claremont Consortium Colleges in Los Angeles, CA, USA. Recipient of the Andrew W. Mellon Award in Economics, micro-finance project on conservation and the environment.
 
 Specialties:
+[Github](https://github.com/jvhuang1786/)
 * Proficient in Mandarin
 * Native English Speaker
 * Conversational Spanish
@@ -24,3 +25,6 @@ Specialties:
 * Strong Economics Background
 * Business and Artistic Minded
 * Passed CFA level 3
+* Twitter Data Analysis
+* Python and R
+* Data Visualization 
