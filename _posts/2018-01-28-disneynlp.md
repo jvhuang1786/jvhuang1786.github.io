@@ -388,8 +388,10 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 %time rf_cv_fit = clf.fit(X_count_r, y_r)
 ```
 
-*Feature Importance*
+*Random Forest Feature Importance*
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/imp.png" alt="r, disney, nlp" width="300" height="300">
+
 
 - MaxFeatures of 5000 was chosen with a CountVectorizer document term matrix.
 
