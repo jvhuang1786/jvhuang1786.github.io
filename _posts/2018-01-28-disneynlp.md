@@ -24,7 +24,11 @@ mathjax: "true"
 
 - Tokyo Disney - Spooky Boo Halloween Parade
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tokyo.png" alt="wordcloud, disney, nlp" width="200" height="200">
+
 - Anaheim Disney - Oogie Boogie Bash
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/anaheim.png" alt="wordcloud, disney, nlp" width="200" height="200">
 
 - The following was searched for using Tweepy and the Twitter API
 
