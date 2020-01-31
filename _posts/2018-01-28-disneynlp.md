@@ -105,16 +105,18 @@ H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 alpha = 0.05
 
 
-                  |Vader Compound Score | Text Blob Polarity
+Params:           |Vader Compound Score | Text Blob Polarity
 ------------------|---------------------|-----------------------
-Mean difference   | -0.1117     | -0.0101
+Mean difference   | -0.1117             | -0.0101
 ------------------|---------------------|-----------------------
 t-stat            |47.4353              | 7.9732
 ------------------|---------------------|-----------------------
 p-value           | 0.000               | 0.000
 
 
-                  |Vader Score Mean     | Text Blob Score Mean
+
+
+Params:           |Vader Score Mean     | Text Blob Score Mean
 ------------------|---------------------|-----------------------
 English           | 0.114               | 0.543
 ------------------|---------------------|-----------------------
@@ -133,14 +135,11 @@ H<sub>A</sub> : the distributions of both samples are not equal.
 
 Japanese Twitter users vs English Twitter Users
 
-       |Vader Compound Score | Text Blob Polarity
+Params |Vader Compound Score | Text Blob Polarity
 -------|---------------------|-----------------------
 stat   | 4493129062.500      | 4867484730.500
 -------|---------------------|-----------------------
 p-value| 0.000               | 0.000
-
-
-
 
 
 
