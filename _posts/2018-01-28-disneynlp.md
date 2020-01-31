@@ -49,7 +49,8 @@ Here's some inline code `x+y`.
 
 #### Conclusion
 
-
+Below is the link to a model you can use for yourself.
+[link](https://github.com/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
 
 
 
