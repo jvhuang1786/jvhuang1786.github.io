@@ -68,7 +68,7 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
                           for d in df['extended_tweet']]
 ```
 
-#### Exploratory Data Analysis
+### Exploratory Data Analysis
 
 Below shows a WordCloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
 
@@ -87,21 +87,21 @@ ScatterText part of the Spacy library was used.  ScatterText allows you to look 
 
 
 
-#### Statistics
+### Statistics
 
->The hypothesis:
+The hypothesis:
 
->>H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
+H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
->>                     H<sub>0</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
-
-
->>H<sub>a</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
-
->>                    H<sub>a</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
+                     H<sub>0</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
->>                              alpha = 0.05
+H<sub>a</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
+
+                   H<sub>a</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
+
+
+                             alpha = 0.05
 
 
 Correlation Matrix
@@ -109,21 +109,21 @@ Correlation Matrix
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="600" height="600">
 
 
-#### Machine Learning
+### Machine Learning
 
 
 
 
-##### Supervised Learning
+#### Supervised Learning
 
 
 
-##### Unsupervised Learning
+#### Unsupervised Learning
 
 
 
 
-#### Model in Action for Chinese New Year Event Tweets
+### Model in Action for Chinese New Year Event Tweets
 
 Below is the link to a model you can use for yourself.
 
