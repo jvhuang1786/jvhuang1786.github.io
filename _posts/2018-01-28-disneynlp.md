@@ -9,23 +9,23 @@ mathjax: "true"
 
 # Intro
 
-The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.
+- The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.
 
-The business use of doing NLP for both Disney resorts would be help Imagineers come up with new decorative themes for the park during seasonal events.  By seeing trends of what people liked and disliked it can help relay information to Disney's business partners of what worked and didn't work.
+- The business use of doing NLP for both Disney resorts would be help Imagineers come up with new decorative themes for the park during seasonal events.  By seeing trends of what people liked and disliked it can help relay information to Disney's business partners of what worked and didn't work.
 
-So what is an Imagineer you might ask?
+- So what is an Imagineer you might ask?
 
-Imagineers are in charge of dreaming, designing and building Disney theme parks, attractions, cruise ships, resorts etc. Basically, they’re about live entertainment. They create things you can see and touch and smell, experiences that you can walk right into. They're the ones who create the experience and allow visitors to emerge themselves into the world of Disney.  For example, the new Galaxy Edge now allows Star Wars fans for a place to gather and enjoy themselves on Batuu.  
+- Imagineers are in charge of dreaming, designing and building Disney theme parks, attractions, cruise ships, resorts etc. Basically, they’re about live entertainment. They create things you can see and touch and smell, experiences that you can walk right into. They're the ones who create the experience and allow visitors to emerge themselves into the world of Disney.  For example, the new Galaxy Edge now allows Star Wars fans for a place to gather and enjoy themselves on Batuu.  
 
 # Twitter API Data Collection
 
-Data was collected through the Twitter API from September 24th, 2019 to November 1st, 2019.  Both parks were running their halloween themed festival.  
+- Data was collected through the Twitter API from September 24th, 2019 to November 1st, 2019.  
 
-Tokyo Disney - Spooky Boo Halloween Parade
+- Tokyo Disney - Spooky Boo Halloween Parade
 
-Anaheim Disney - Oogie Boogie Bash
+- Anaheim Disney - Oogie Boogie Bash
 
-The following was searched for using Tweepy and the Twitter API
+- The following was searched for using Tweepy and the Twitter API
 
 Disney Anaheim      | Disney Tokyo
 --------------------|---------------
@@ -43,7 +43,7 @@ californiadisney    | tdr_now
 
 
 
-After collection everything ended up in a json file.
+- Tweepy after collecting from Sept 24th, 2019 to Nov 1st, 2019 throughout the day returned a json file.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="1000" height="1000">
 
@@ -51,7 +51,7 @@ After collection everything ended up in a json file.
 
 # Data Wrangling/Cleaning
 
-Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
+- Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
 
 * extended_tweet
 * extended_entities
@@ -71,22 +71,44 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
 
 # Exploratory Data Analysis
 
-Below shows a WordCloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
-
+*English Twitter User WordCloud*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
 
-Things like the experience, lottery tickets for the show One Mans Dream was being talked about the most in the Japanese text WordCloud visualization.
+- The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
 
+
+*Japanese Twitter User WordCloud*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/japanese.png" alt="wordcloud, disney, nlp" width="700" height="700">
 
-*Plotly Tweets*
+- Things like the experience, lottery tickets for the show One Mans Dream was being talked about the most in the Japanese text WordCloud visualization.
+
+*Tweet Peaks For English Users*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tweet_count_en.gif" alt="plotly, disney, nlp" width="3600" height="4000">
 
-*Plotly Tweets*
+- Oct 6th was Gay Days Anaheim.
+- 25th was the weekend before halloween and people celebrated before the 31st which was a Thursday in 2019.
+
+*Tweet Peaks For Japanese Users*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tweet_count_ja.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+- Tweet count spiked up on the 15th for the Japan Airline promotion
+- 20th people were tweeting about One Man's Dream 2 ending
+- November 1st was the day after Halloween
+
+*English Hashtag/Emoji/Mention Count*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_hsh.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+- The pumpkin of course was the highest used emoji during the Halloween event.  
+- The disgusting face showed up in the hashtags as there was a measles scare at Disney Land.  
 
 *English Word Count*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_word_count.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*Japanese Hashtag/Emoji/Mention Count*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_hsh.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+- Japan airlines ran a promotion giving away free Disney Land tickets, there were a lot of stars in their tweet.
+- tdr_now talks about what is happening right now at Tokyo Disney Resort.  tdr_md is Tokyo Disney Resort Merchandise.
 
 *Japanese Word Count*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_word_count.gif" alt="plotly, disney, nlp" width="3600" height="4000">
@@ -94,16 +116,20 @@ Things like the experience, lottery tickets for the show One Mans Dream was bein
 *Influencer Map English*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_map.gif" alt="plotly, disney, nlp" width="3600" height="4000">
 
+- Most English twitter Users were in Europe and America.  
+
 *Influencer Map Japanese*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_map.gif" alt="plotly, disney, nlp" width="3600" height="4000">
 
+- Most Japanese Twitter users were in Japan or in America.
+
 [Twitter Interactive Influencer Map](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/twittermap.html)
 
-ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
+ - ScatterText part of Spacy, allows you to look up certain words and shows you in which document in the corpus the word shows up in.  
+ - Japanese documenets were compared with English. 
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="3600" height="4000">
-
 
 
 
@@ -175,7 +201,7 @@ Correlation is high between favorite count and retweet count.
 
 # Machine Learning
 
-The goal here is to create a classifier that can classify negative and positive and between Japanese and English.  After classification hopefully topic models can be generated to give insight to Imagineers or Disney partners.
+- The goal here is to create a classifier that can classify negative and positive and between Japanese and English.  After classification hopefully topic models can be generated to give insight to Imagineers or Disney partners.
 
 ## Preprocessing Text Steps
 
@@ -219,8 +245,6 @@ The following features were engineered.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/r_sentiment_count.gif" alt="r, disney, nlp" width="2000" height="2000">
 
-Use of R Sentiment Emotion
-
 
 ## Random Forest Classifier Countvectorizer
 
@@ -240,7 +264,42 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 %time rf_cv_fit = clf.fit(X_count_r, y_r)
 ```
 
+*Feature Importance*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/imp.png" alt="r, disney, nlp" width="2000" height="2000">
+
+- MaxFeatures of 5000 was chosen with a CountVectorizer document term matrix.
+
+*Features vs Accuracy Score*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/features.png" alt="r, disney, nlp" width="2000" height="2000">
+
+```python
+
+#Instantiate our model
+rf = RandomForestClassifier(n_estimators = 650, max_depth = 500, max_features = 'log2',
+                            n_jobs=-1)
+
+#Model Fit
+start = time.time()
+rf.fit(X_resampled_ros, y_resampled_ros)
+end = time.time()
+fit_time = (end - start)
+
+#Model Predict
+start = time.time()
+y_pred = rf.predict(X_test_vect)
+end = time.time()
+pred_time = (end - start)
+```
+
+*Metrics*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/score.png" alt="r, disney, nlp" width="2000" height="2000">
+
+*Confusion Matrix*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/confusion.png" alt="r, disney, nlp" width="2000" height="2000">
+
+
 ## LDA Topic Modeling
+- Lastly can we create topics after separating the sentiment.
 
 ```python
 lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
