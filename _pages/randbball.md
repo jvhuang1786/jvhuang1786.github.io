@@ -4,7 +4,7 @@ permalink: /nba_salaries/
 title: "Basketball Salaries"
 author_profile: true
 header:
-  image: "/images/space.png"
+  image: "/images/kobe.jpg"
 ---
 
 
