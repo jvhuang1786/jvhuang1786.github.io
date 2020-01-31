@@ -3,7 +3,6 @@ title: "Disney NLP: Analysis of Tokyo and Anaheim Disney Resorts"
 date: 2020-01-30
 tags: [data wrangling, data science, nlp]
 header:
-  image: "/images/disneynlp/cinderella.jpg"
 excerpt: "Natural Language Processing, Disney, Data Science"
 mathjax: "true"
 ---
@@ -31,8 +30,8 @@ Python code block:
 
 ##### Exploratory Data Analysis
 
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scattertext.gif" alt="scattertext, disney, nlp">
+<img src=”images/disneynlp/scattertext.gif alt=”animated” />
+
 
 ##### Statistics
 
