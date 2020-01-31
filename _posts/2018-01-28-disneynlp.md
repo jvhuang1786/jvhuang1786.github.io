@@ -63,7 +63,6 @@ Tweepy does the strange thing of separating text that you collect into four sepa
  Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well.
 
 ```python
-#pull out extended Tweets
 df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
                           for d in df['extended_tweet']]
 ```
@@ -153,17 +152,63 @@ Correlation Matrix
 
 ### Machine Learning
 
+Preprocessing the text
 
+```python
+stopwords = nltk.corpus.stopwords.words('english')
+wn = nltk.WordNetLemmatizer()
+punc = lambda x: re.sub("!|,|\?|\'|-|\"|&|。|\)|\(|！|，|\.*|/|\[|\]|\u2026|\d|:|~|、|？|☆|’|– |【|】|「|」|《|》|※| “|”|＊|→||[\b\.\b]{3}||@||@ |#|# |", '',x)
 
+#Clean
+def clean_text(soup):
+    soup = BeautifulSoup(soup, 'lxml')
+    souped = soup.get_text()
+    stripped = re.sub(r'https?://[A-Za-z0-9./]+', '', souped)
+    words = stripped.split()
+    mention = [word for word in words if not word.startswith('@')]
+    RT = [word for word in mention if not word.startswith('RT')]
+    text = " ".join([wn.lemmatize(word) for word in RT if word not in stopwords])
+    punct = "".join([word.lower() for word in text if word not in string.punctuation])
+    short_words = ' '.join([w for w in punct.split() if len(w)>2])
+    ja_punct = ''.join([punc(word) for word in short_words])
+    tokens = re.split('\W+', ja_punct)
+    return (" ".join(tokens)).strip()
+```
 
 #### Supervised Learning
 
+Random Forest Classifier Countvectorizer
 
+```python
+rf_clf = RandomForestClassifier()
+
+hyperparameters = {
+    'n_estimators': range(50,1000,100),
+    'max_depth': [5,50,100, 200, 300, 400, 500],
+    'max_features': ['auto', 'sqrt', 'log2']
+}
+
+clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
+                         n_iter = 10, random_state = 77)
+%time rf_cv_fit = clf.fit(X_count_r, y_r)
+```
 
 #### Unsupervised Learning
 
+LDA Topic Modeling
 
-
+```python
+lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
+                                           id2word=id2word,
+                                           num_topics=4,
+                                           random_state=777,
+                                           update_every=1,
+                                           chunksize=10,
+                                           passes=10,
+                                           alpha='symmetric',
+                                           iterations=100,
+                                            per_word_topics=True)
+```
 
 ### Model in Action for Chinese New Year Event Tweets
 
