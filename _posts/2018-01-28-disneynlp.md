@@ -160,8 +160,9 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/retweeted.png" alt="wordcloud, disney, nlp" width="800" height="800">
 
 *English Twitter User WordCloud*
-
+<p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
+</p>
 
 - The most common words are fuck and annual pass.  
 
@@ -232,16 +233,16 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 *H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.*
 
 <p align="center">
-**H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
+H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 </p>
 
 *H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.*
 
 <p align="center">
-**H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>**
+H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 </p>
 <p align="center">
-**alpha : 0.05**
+alpha : 0.05
 </p>
 
 Params:           |Vader Compound Score | Text Blob Polarity
