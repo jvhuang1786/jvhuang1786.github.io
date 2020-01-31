@@ -17,7 +17,7 @@ So what is an Imagineer you might ask?
 
 Imagineers are in charge of dreaming, designing and building Disney theme parks, attractions, cruise ships, resorts etc. Basically, they’re about live entertainment. They create things you can see and touch and smell, experiences that you can walk right into. They're the ones who create the experience and allow visitors to emerge themselves into the world of Disney.  For example, the new Galaxy Edge now allows Star Wars fans for a place to gather and enjoy themselves on Batuu.  
 
-###Twitter API
+### Twitter API
 
 Data was collected through the Twitter API from September 24th, 2019 to November 1st, 2019.  Both parks were running their halloween themed festival.  
 
@@ -27,11 +27,11 @@ Anaheim Disney - Oogie Boogie Bash
 
 The following was searched for using Tweepy and the Twitter API
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/hashtags.png" alt="wordcloud, disney, nlp" width="200" height="100">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/hashtags.png" alt="wordcloud, disney, nlp" width="500" height="500">
 
 This was result I ended up with.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="200" height="100">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="500" height="500">
 
 
 
@@ -56,12 +56,12 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
 
 #### Exploratory Data Analysis
 
-<p> Below shows a wordcloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.<p>
+Below shows a wordcloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="200" height="100">
 
 
-
+ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="2200" height="3000">
