@@ -8,7 +8,7 @@ mathjax: "true"
 ---
 
 
-<p>The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.  We will run various ML modes to try to predict user sentiment.  Using Microsoft word translation to translate the text from Japanese twitter users to be able to compare them with English twitter users.<p>
+The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.  We will run various ML modes to try to predict user sentiment.  Using Microsoft word translation to translate the text from Japanese twitter users to be able to compare them with English twitter users.
 
 #### Some of the questions I hope to answer are:
 
@@ -20,16 +20,16 @@ mathjax: "true"
 
 #### Data Wrangling/Cleaning
 
-<p>Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
+Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
 
 * extended_tweet
 * extended_entities
 * retweeted_status
 * text
 * quoted_status
-<p>
 
-<p> Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well. <p>
+
+ Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well. 
 
 ```python
 #pull out extended Tweets
