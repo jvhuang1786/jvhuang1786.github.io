@@ -30,7 +30,7 @@ Python code block:
 
 ##### Exploratory Data Analysis
 
-<img src=”images/disneynlp/scattertext.gif alt=”animated” />
+<img src={{ site.url }}{{ site.baseurl }}"images/disneynlp/scattertext.gif alt="wordcloud, disney, nlp">
 
 
 ##### Statistics
