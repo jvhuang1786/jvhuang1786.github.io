@@ -401,14 +401,26 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 *WordCloud Topic Negative Japanese*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_neg.png" alt="r, disney, nlp" width="800" height="800">
 
+*pyLDAvis Negative Japanese*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_neg_ja.gif" alt="r, disney, nlp" width="2000" height="2000">
+
 *WordCloud Topic Positive Japanese*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_pos.png" alt="r, disney, nlp" width="800" height="800">
+
+*pyLDAvis Positive Japanese*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_pos_ja.gif" alt="r, disney, nlp" width="2000" height="2000">
 
 *WordCloud Topic Negative English*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_neg.png" alt="r, disney, nlp" width="800" height="800">
 
+*pyLDAvis Negative English*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_en_neg.gif" alt="r, disney, nlp" width="2000" height="2000">
+
 *WordCloud Topic Positive English*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_pos.png" alt="r, disney, nlp" width="800" height="800">
+
+*pyLDAvis Positive English*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_pos_en.gif" alt="r, disney, nlp" width="2000" height="2000">
 
 - From the Japanese word cloud we can see topics like family and the last show of One Man's Dream forming
 - From the English tweets we can see topics about the cold and long lines and Halloween celebration forming.
@@ -427,4 +439,4 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cny.png" alt="r, disney, nlp" width="800" height="800">
 
 - I collected 2000 tweets for the 2020 CNY about Disney using the above model.  
-- However, understandably since it's another seasonal holiday the model did poorly and scored only 47 percent on accuracy. 
+- However, understandably since it's another seasonal holiday the model did poorly and scored only 47 percent on accuracy.
