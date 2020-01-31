@@ -83,14 +83,17 @@ Things like the experience, lottery tickets for the show One Mans Dream was bein
 ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="2200" height="3000">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="3600" height="4000">
 
 
 
 
 # Statistics
 
-The hypothesis:
+## Difference Between Means
+
+* Do Japanese twitter users have more or equal positive sentiment towards the Disney parks than English twitter users?
+
 
 H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
@@ -125,9 +128,9 @@ Japanese          | 0.226               | 0.482
 
 
 
-Mann-Whitney U Test non-parametric distribution test
+## Mann-Whitney U Test non-parametric distribution test
 
-Tests whether the distributions of two independent samples are equal or not.
+* Tests whether the distributions of two independent samples are equal or not.
 
 H<sub>0</sub> : the distributions of both samples are equal.
 
@@ -141,17 +144,33 @@ stat   | 4493129062.500      | 4867484730.500
 -------|---------------------|-----------------------
 p-value| 0.000               | 0.000
 
+Japanese and English twitter users have different sentiment towards Disney on twitter. Both p-values were far below 0.05.  TextBlob gave a higher score for English users, however NLTK Vader is more accurate in interpreting social media sentiment.
 
 
+## Correlation Matrix
 
-Correlation Matrix
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="2000" height="2000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="1000" height="1000">
+Correlation is high between favorite count and retweet count.
 
 
 # Machine Learning
 
+The goal here is to create a classifier that can classify negative and positive and between Japanese and English.  After classification hopefully topic models can be generated to give insight to Imagineers or Disney partners.
+
 ## Preprocessing the text
+
+Preprocessing Text Steps
+-------------------------
+1. Remove ampersand /n
+2. Remove href
+3. Remove @ mentions
+4. Remove RT
+5. Lemmatize
+6. Remove punctuation
+7. Remove short words less than 2 characters
+8. Remove special Japanese Punctuation
+9. Tokenize 
 
 ```python
 stopwords = nltk.corpus.stopwords.words('english')
@@ -174,9 +193,9 @@ def clean_text(soup):
     return (" ".join(tokens)).strip()
 ```
 
-## Supervised Learning
+## Random Forest Classifier Countvectorizer
 
-Random Forest Classifier Countvectorizer
+
 
 ```python
 rf_clf = RandomForestClassifier()
@@ -192,9 +211,7 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 %time rf_cv_fit = clf.fit(X_count_r, y_r)
 ```
 
-## Unsupervised Learning
-
-LDA Topic Modeling
+## LDA Topic Modeling
 
 ```python
 lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
