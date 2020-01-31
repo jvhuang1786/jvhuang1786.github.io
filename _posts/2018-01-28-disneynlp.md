@@ -60,21 +60,100 @@ californiadisney    | tdr_now
 * quoted_status
 
 
- Following code was used to pull out the full text from a nested dictionary.  There were times I had to pull a nested dictionary from a nested dictionary as well.
+ - Following code are highlights of data wrangling.
 
+*Getting Nested Dictionaries*
 ```python
 df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
                           for d in df['extended_tweet']]
 ```
 
+*Combining text field into one* 
+```python
+#combining text columns tweets
+df['text'] = df['text'].replace(np.nan,'')
+df['len_text'] = df['text'].apply(len)
+df['combo_text'] = np.where(df['len_text'] < 140, df['text'], df['ex_tw_full_text'])
+df['combo_text'] = df['combo_text'].replace(np.nan,'')
+
+#combining text columns retweets
+df['rt_text'] = df['rt_text'].replace(np.nan,'')
+df['rt_len'] = df['rt_text'].apply(len)
+df['rtcombo_text'] = np.where(df['rt_len'] < 140, df['rt_text'], df['rt_full_text'])
+df['rtcombo_text'] = df['rtcombo_text'].replace(np.nan,'')
+
+#combining retweets and tweets
+df['rtcombo_len'] = df['rtcombo_text'].apply(len)
+df['full_text'] = np.where(df['rtcombo_len'] == 0, df['combo_text'], df['rtcombo_text'])
+```
+
+*Geocoder API*
+```python
+from opencage.geocoder import OpenCageGeocode
+from pprint import pprint
+key = # get api key from:  https://opencagedata.com
+geocoder = OpenCageGeocode(key)
+
+
+en_lat = []   # create empty lists
+en_long = []
+
+for x in en_loc3000.user_location: # iterate over rows in dataframe
+    try:
+        query = x
+        results = geocoder.geocode(query)   
+        lat = results[0]['geometry']['lat']
+        long = results[0]['geometry']['lng']
+        en_lat.append(lat)
+        en_long.append(long)
+    except IndexError:
+        en_lat.append(np.nan)
+        en_long.append(np.nan)
+```
+
+*Word Document Back to Python after Word/Google Translation Japanese Text*
+```python
+import io
+import csv
+from docx import Document
+
+def read_docx_tables(filename, tab_id=None, **kwargs):
+    def read_docx_tab(tab, **kwargs):
+        vf = io.StringIO()
+        writer = csv.writer(vf)
+        for row in tab.rows:
+            writer.writerow(cell.text for cell in row.cells)
+        vf.seek(0)
+        return pd.read_csv(vf, **kwargs)
+
+    doc = Document(filename)
+    if tab_id is None:
+        return [read_docx_tab(tab, **kwargs) for tab in doc.tables]
+    else:
+        try:
+            return read_docx_tab(doc.tables[tab_id], **kwargs)
+        except IndexError:
+            print('Error: specified [tab_id]: {}  does not exist.'.format(tab_id))
+            raise
+```
+
+- The Data Frame used for EDA and statistical analysis had 270850 rows and 56 columns.
+- Machine learning data preparation had 87510 rows and 17 columns.
+- Japanese text was translated using Office 365.
+- R Sentiment, NLTK Vader and TextBlob was used to label text sentiment.
 
 
 # Exploratory Data Analysis
 
+*Most Retweeted During the collection period*
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/retweeted.png" alt="wordcloud, disney, nlp" width="800" height="800">
+
 *English Twitter User WordCloud*
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
 
-- The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
+- The most common words are fuck and annual pass.  
 
 
 *Japanese Twitter User WordCloud*
@@ -126,7 +205,7 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
 [Twitter Interactive Influencer Map](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/twittermap.html)
 
  - ScatterText part of Spacy, allows you to look up certain words and shows you in which document in the corpus the word shows up in.  
- - Japanese documenets were compared with English. 
+ - Japanese documenets were compared with English.
 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="3600" height="4000">
@@ -170,7 +249,11 @@ English           | 0.114               | 0.543
 ------------------|---------------------|-----------------------
 Japanese          | 0.226               | 0.482
 
+*NLTK Vader Distribution*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vader.png" alt="correlation, disney, nlp" width="2000" height="2000">
 
+- Distribution wasn't normal after using the Shapiro Wilk test, however central limit theorem should hold.
+- Ran a Non-Parametric Test to double check.
 
 
 ## Mann-Whitney U Test non-parametric distribution test
@@ -192,8 +275,7 @@ p-value| 0.000               | 0.000
 Japanese and English twitter users have different sentiment towards Disney on twitter. Both p-values were far below 0.05.  TextBlob gave a higher score for English users, however NLTK Vader is more accurate in interpreting social media sentiment.
 
 
-## Correlation Matrix
-
+*Correlation Matrix*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="2000" height="2000">
 
 Correlation is high between favorite count and retweet count.
@@ -246,7 +328,7 @@ The following features were engineered.
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/r_sentiment_count.gif" alt="r, disney, nlp" width="2000" height="2000">
 
 
-## Random Forest Classifier Countvectorizer
+## Random Forest Classifier CountVectorizer
 
 Hyperparameter Tuning
 
@@ -265,7 +347,7 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 ```
 
 *Feature Importance*
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/imp.png" alt="r, disney, nlp" width="2000" height="2000">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/imp.png" alt="r, disney, nlp" width="500" height="500">
 
 - MaxFeatures of 5000 was chosen with a CountVectorizer document term matrix.
 
@@ -292,7 +374,7 @@ pred_time = (end - start)
 ```
 
 *Metrics*
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/score.png" alt="r, disney, nlp" width="2000" height="2000">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/score.png" alt="r, disney, nlp" width="500" height="500">
 
 *Confusion Matrix*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/confusion.png" alt="r, disney, nlp" width="2000" height="2000">
