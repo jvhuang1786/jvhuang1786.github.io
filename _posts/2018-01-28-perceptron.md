@@ -1,10 +1,10 @@
 ---
-title: "Springboard Project"
-date: 2019-10-01
-tags: [data wrangling, data science, learning]
+title: "Disney NLP: Perceptron"
+date: 2020-01-30
+tags: [data wrangling, data science, nlp]
 header:
   image: "/images/perceptron/percept.jpg"
-excerpt: "Data Wrangling, Data Science, learning"
+excerpt: "Natural Language Processing, Perceptron, Data Science"
 mathjax: "true"
 ---
 
