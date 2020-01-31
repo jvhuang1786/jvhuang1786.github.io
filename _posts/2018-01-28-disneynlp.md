@@ -7,7 +7,7 @@ excerpt: "Natural Language Processing, Disney, Data Science"
 mathjax: "true"
 ---
 
-### Intro
+# Intro
 
 The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.
 
@@ -17,7 +17,7 @@ So what is an Imagineer you might ask?
 
 Imagineers are in charge of dreaming, designing and building Disney theme parks, attractions, cruise ships, resorts etc. Basically, they’re about live entertainment. They create things you can see and touch and smell, experiences that you can walk right into. They're the ones who create the experience and allow visitors to emerge themselves into the world of Disney.  For example, the new Galaxy Edge now allows Star Wars fans for a place to gather and enjoy themselves on Batuu.  
 
-### Twitter API
+# Twitter API Data Collection
 
 Data was collected through the Twitter API from September 24th, 2019 to November 1st, 2019.  Both parks were running their halloween themed festival.  
 
@@ -49,7 +49,7 @@ After collection everything ended up in a json file.
 
 
 
-### Data Wrangling/Cleaning
+# Data Wrangling/Cleaning
 
 Tweepy does the strange thing of separating text that you collect into four separate nested dictionaries.
 
@@ -69,7 +69,7 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
 
 
 
-### Exploratory Data Analysis
+# Exploratory Data Analysis
 
 Below shows a WordCloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
 
@@ -88,7 +88,7 @@ ScatterText part of the Spacy library was used.  ScatterText allows you to look 
 
 
 
-### Statistics
+# Statistics
 
 The hypothesis:
 
@@ -149,9 +149,9 @@ Correlation Matrix
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="1000" height="1000">
 
 
-### Machine Learning
+# Machine Learning
 
-Preprocessing the text
+## Preprocessing the text
 
 ```python
 stopwords = nltk.corpus.stopwords.words('english')
@@ -174,7 +174,7 @@ def clean_text(soup):
     return (" ".join(tokens)).strip()
 ```
 
-#### Supervised Learning
+## Supervised Learning
 
 Random Forest Classifier Countvectorizer
 
@@ -192,7 +192,7 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 %time rf_cv_fit = clf.fit(X_count_r, y_r)
 ```
 
-#### Unsupervised Learning
+## Unsupervised Learning
 
 LDA Topic Modeling
 
@@ -209,7 +209,7 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                             per_word_topics=True)
 ```
 
-### Model in Action for Chinese New Year Event Tweets
+# Model in Action for Chinese New Year Event Tweets
 
 Below is the link to a model you can use for yourself.
 
