@@ -398,9 +398,33 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                            iterations=100,
                                             per_word_topics=True)
 ```
+*WordCloud Topic Negative Japanese*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_neg.png" alt="r, disney, nlp" width="800" height="800">
+
+*WordCloud Topic Positive Japanese*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_pos.png" alt="r, disney, nlp" width="800" height="800">
+
+*WordCloud Topic Negative English*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_neg.png" alt="r, disney, nlp" width="800" height="800">
+
+*WordCloud Topic Positive English*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_pos.png" alt="r, disney, nlp" width="800" height="800">
+
+- From the Japanese word cloud we can see topics like family and the last show of One Man's Dream forming
+- From the English tweets we can see topics about the cold and long lines and Halloween celebration forming.
+
 
 # Model in Action for Chinese New Year Event Tweets
 
-Below is the link to a model you can use for yourself.
+- Below is a link of the model you can use.
+- It will collect twitter data from the Twitter API
+- Clean the data
+- Then run a classifier and topic builder
 
 [Disney NLP Model Start to Finish](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
+
+*CNY Confusion Matrix*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cny.png" alt="r, disney, nlp" width="800" height="800">
+
+- I collected 2000 tweets for the 2020 CNY about Disney using the above model.  
+- However, understandably since it's another seasonal holiday the model did poorly and scored only 47 percent on accuracy. 

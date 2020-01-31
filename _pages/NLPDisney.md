@@ -7,6 +7,8 @@ header:
   image: "/images/disneysea.png"
 ---
 
+[Disney NLP Write UP](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
+[Disney NLP Github](https://github.com/jvhuang1786/DisTweetCapstone)
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
