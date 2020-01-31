@@ -4,7 +4,7 @@ permalink: /deep_learning/
 title: "Deep Learning"
 author_profile: true
 header:
-  image: "/images/disneysea.png"
+  image: "/images/deeplearn.png"
 ---
 
 {% include base_path %}
