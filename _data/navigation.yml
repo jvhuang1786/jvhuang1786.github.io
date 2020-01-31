@@ -4,3 +4,5 @@ main:
     url: /about/
   - title: "Natural Language Processing"
     url: /disney_nlp/
+  - title: "Deep Learning"
+    url: /deep_learning/
