@@ -43,9 +43,7 @@ californiadisney    | tdr_now
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/hashtags.png" alt="wordcloud, disney, nlp" width="500" height="500">
-
-This was result I ended up with.
+After collection everything ended up in a json file.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/unclean.png" alt="wordcloud, disney, nlp" width="500" height="500">
 
@@ -91,22 +89,22 @@ ScatterText part of the Spacy library was used.  ScatterText allows you to look 
 
 #### Statistics
 
-The hypothesis:
+>The hypothesis:
 
-$$𝐻0$$ = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
+>>H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
-                            $$H0: μ 1 = μ 2$$
-
-
-$$Ha$$ = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
-
-                            $$Ha: μ 1 ≠ μ 2$$
+>>                     H<sub>0</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
-                            $$alpha = 0.05 $$
+>>H<sub>a</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
+
+>>                    H<sub>a</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
+>>                              alpha = 0.05
 
+
+Correlation Matrix
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="600" height="600">
 
