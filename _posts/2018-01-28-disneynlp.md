@@ -277,7 +277,8 @@ Japanese          | 0.226               | 0.482
 
 <p align="center">
 H<sub>0</sub> : the distributions of both samples are equal.
-
+</p>
+<p align="center">
 H<sub>A</sub> : the distributions of both samples are not equal.
 </p>
 
