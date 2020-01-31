@@ -98,12 +98,52 @@ H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polar
 H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
-H<sub>a</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
+H<sub>A</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
 
-H<sub>a</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
+H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
 alpha = 0.05
+
+
+                  |Vader Compound Score | Text Blob Polarity
+------------------|---------------------|-----------------------
+Mean difference   | -0.1117     | -0.0101
+------------------|---------------------|-----------------------
+t-stat            |47.4353              | 7.9732
+------------------|---------------------|-----------------------
+p-value           | 0.000               | 0.000
+
+
+                  |Vader Score Mean     | Text Blob Score Mean
+------------------|---------------------|-----------------------
+English           | 0.114               | 0.543
+------------------|---------------------|-----------------------
+Japanese          | 0.226               | 0.482
+
+
+
+
+Mann-Whitney U Test non-parametric distribution test
+
+Tests whether the distributions of two independent samples are equal or not.
+
+H<sub>0</sub> : the distributions of both samples are equal.
+
+H<sub>A</sub> : the distributions of both samples are not equal.
+
+Japanese Twitter users vs English Twitter Users
+
+       |Vader Compound Score | Text Blob Polarity
+-------|---------------------|-----------------------
+stat   | 4493129062.500      | 4867484730.500
+-------|---------------------|-----------------------
+p-value| 0.000               | 0.000
+
+
+
+
+
 
 
 Correlation Matrix
@@ -129,4 +169,4 @@ Correlation Matrix
 
 Below is the link to a model you can use for yourself.
 
-[Disney NLP Model Start to Finish](https://github.com/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
+[Disney NLP Model Start to Finish](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
