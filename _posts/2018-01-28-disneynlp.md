@@ -114,17 +114,17 @@ ScatterText part of the Spacy library was used.  ScatterText allows you to look 
 * Do Japanese twitter users have more or equal positive sentiment towards the Disney parks than English twitter users?
 
 
-H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
+H<sub>0</sub> : English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
 H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
-H<sub>A</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
+H<sub>A</sub> : English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
 
 H<sub>A</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
-alpha = 0.05
+alpha : 0.05
 
 
 Params:           |Vader Compound Score | Text Blob Polarity
