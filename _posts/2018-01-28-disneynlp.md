@@ -93,15 +93,15 @@ The hypothesis:
 
 H<sub>0</sub> = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
-                     H<sub>0</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
+H<sub>0</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
 H<sub>a</sub> = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
 
-                   H<sub>a</sub>: μ<sub>1</sub> ≠ μ<sub>2</sub>
+H<sub>a</sub> : μ<sub>1</sub> ≠ μ<sub>2</sub>
 
 
-                             alpha = 0.05
+alpha = 0.05
 
 
 Correlation Matrix
