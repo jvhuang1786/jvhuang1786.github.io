@@ -79,6 +79,25 @@ Things like the experience, lottery tickets for the show One Mans Dream was bein
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/japanese.png" alt="wordcloud, disney, nlp" width="700" height="700">
 
+*Plotly Tweets*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tweet_count_en.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*Plotly Tweets*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/tweet_count_ja.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*English Word Count*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_word_count.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*Japanese Word Count*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_word_count.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*Influencer Map English*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_map.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+*Influencer Map Japanese*
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/ja_map.gif" alt="plotly, disney, nlp" width="3600" height="4000">
+
+[Twitter Interactive Influencer Map](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/twittermap.html)
 
 ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
 
@@ -158,11 +177,9 @@ Correlation is high between favorite count and retweet count.
 
 The goal here is to create a classifier that can classify negative and positive and between Japanese and English.  After classification hopefully topic models can be generated to give insight to Imagineers or Disney partners.
 
-## Preprocessing the text
+## Preprocessing Text Steps
 
-Preprocessing Text Steps
--------------------------
-1. Remove ampersand /n
+1. Remove amp,&, /n, lxml
 2. Remove href
 3. Remove @ mentions
 4. Remove RT
@@ -170,7 +187,7 @@ Preprocessing Text Steps
 6. Remove punctuation
 7. Remove short words less than 2 characters
 8. Remove special Japanese Punctuation
-9. Tokenize 
+9. Tokenize
 
 ```python
 stopwords = nltk.corpus.stopwords.words('english')
@@ -192,10 +209,22 @@ def clean_text(soup):
     tokens = re.split('\W+', ja_punct)
     return (" ".join(tokens)).strip()
 ```
+The following features were engineered.
+* Tweet Length
+* Capitalization Count
+* Punctuation Count
+* Hashtag Count
+* Emoji Count
+* R Sentiment Emotion
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/r_sentiment_count.gif" alt="r, disney, nlp" width="2000" height="2000">
+
+Use of R Sentiment Emotion
+
 
 ## Random Forest Classifier Countvectorizer
 
-
+Hyperparameter Tuning
 
 ```python
 rf_clf = RandomForestClassifier()
