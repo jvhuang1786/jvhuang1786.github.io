@@ -68,7 +68,7 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
                           for d in df['extended_tweet']]
 ```
 
-*Combining text field into one* 
+*Combining text field into one*
 ```python
 #combining text columns tweets
 df['text'] = df['text'].replace(np.nan,'')
@@ -330,8 +330,9 @@ The following features were engineered.
 
 ## Random Forest Classifier CountVectorizer
 
-Hyperparameter Tuning
+- Labels for prediction are 0-ja negative, 1-ja neutral, 2-ja positive, 3-en negative, 4-en neutral, 5-en positive.
 
+*Hyperparameter Tuning*
 ```python
 rf_clf = RandomForestClassifier()
 
@@ -354,8 +355,8 @@ clf = RandomizedSearchCV(rf_clf, hyperparameters, cv=5, n_jobs=-1,
 *Features vs Accuracy Score*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/features.png" alt="r, disney, nlp" width="2000" height="2000">
 
+*Random Forest Final Model*
 ```python
-
 #Instantiate our model
 rf = RandomForestClassifier(n_estimators = 650, max_depth = 500, max_features = 'log2',
                             n_jobs=-1)
@@ -381,8 +382,10 @@ pred_time = (end - start)
 
 
 ## LDA Topic Modeling
-- Lastly can we create topics after separating the sentiment.
+- Now that we have a model that can classify sentiment.  
+- Want to take positive and negative sentiment and create topics to relay information to the Imagineers or Disney merchandise partners.
 
+*Latent Dirichlet Allocation Model*
 ```python
 lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                            id2word=id2word,
