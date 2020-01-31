@@ -3,6 +3,7 @@ title: "Disney NLP: Analysis of Tokyo and Anaheim Disney Resorts"
 date: 2020-01-30
 tags: [data wrangling, data science, nlp]
 header:
+  image: "/images/article.png"
 excerpt: "Natural Language Processing, Disney, Data Science"
 mathjax: "true"
 ---

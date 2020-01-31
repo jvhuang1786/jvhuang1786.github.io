@@ -6,3 +6,5 @@ main:
     url: /disney_nlp/
   - title: "Deep Learning"
     url: /deep_learning/
+  - title: "Basketball Salaries"
+    url: /nba_salaries/
