@@ -27,6 +27,22 @@ Anaheim Disney - Oogie Boogie Bash
 
 The following was searched for using Tweepy and the Twitter API
 
+Disney Anaheim      | Disney Tokyo
+--------------------|---------------
+disneylandresort    | disneysea
+disneyland          | disneytokyo
+disneyresort        | disneytokyoresort
+californiaadventure | tokyodisneyresort
+downtowndisney      | tokyodisneyland
+disneyanaheim       | 東京ディズニーランド
+dca                 | ディズニーランド
+disneylandanaheim   | 東京ディズニーシー
+disneycalifornia    | ズニーシー
+californiadisney    | tdr_now
+                    | tdr_md
+
+
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/hashtags.png" alt="wordcloud, disney, nlp" width="500" height="500">
 
 This was result I ended up with.
