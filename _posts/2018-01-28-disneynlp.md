@@ -35,7 +35,7 @@ Python code block:
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="300" height="200">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="1000" height="1600">
 
 #### Statistics
 

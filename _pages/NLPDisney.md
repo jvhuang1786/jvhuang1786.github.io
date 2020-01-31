@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /disney_nlp/
-title: "Disney Parks Twitter NLP by Tags"
+title: "Disney Parks Twitter NLP"
 author_profile: true
 header:
   image: "/images/disneysea.png"
