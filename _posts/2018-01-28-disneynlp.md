@@ -411,13 +411,13 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_pos_ja.gif" alt="r, disney, nlp" width="2000" height="2000">
 
 *WordCloud Topic Negative English*
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_neg.png" alt="r, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/eng_neg.jpg" alt="r, disney, nlp" width="800" height="800">
 
 *pyLDAvis Negative English*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_en_neg.gif" alt="r, disney, nlp" width="2000" height="2000">
 
 *WordCloud Topic Positive English*
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/en_pos.png" alt="r, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/eng_pos.jpg" alt="r, disney, nlp" width="800" height="800">
 
 *pyLDAvis Positive English*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/vis_pos_en.gif" alt="r, disney, nlp" width="2000" height="2000">
