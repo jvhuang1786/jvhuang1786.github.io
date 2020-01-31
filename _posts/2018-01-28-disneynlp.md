@@ -97,7 +97,7 @@ df['rtcombo_len'] = df['rtcombo_text'].apply(len)
 df['full_text'] = np.where(df['rtcombo_len'] == 0, df['combo_text'], df['rtcombo_text'])
 ```
 
-*Geocoder API*
+*Geocoder API for missing location data*
 ```python
 from opencage.geocoder import OpenCageGeocode
 from pprint import pprint
@@ -145,6 +145,29 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
         except IndexError:
             print('Error: specified [tab_id]: {}  does not exist.'.format(tab_id))
             raise
+```
+*Sentiment labeler 3 sentiment analyzer voting tiebreaker*
+```python
+#Creating the tie breaker between textblob,vader and r_sentiment
+test = np.where((df3['vader_score_word'] == df3['tb_word']), df3['vader_score_word'], 'not sure')
+test2 = np.where((df3['tb_word'] == df3['r_sentiment']), df3['tb_word'], 'not sure')
+test3 = np.where((df3['vader_score_word'] == df3['r_sentiment']), df3['vader_score_word'], 'not sure')
+
+
+test = pd.DataFrame(test)
+test.rename(columns = {0:'vaderVstb'}, inplace = True)
+test['tbVsr'] = test2
+test['vaderVsr'] = test3
+
+
+t2 = np.where(test['vaderVstb'] == 'not sure', test['tbVsr'], test['vaderVstb'])
+t2 = pd.DataFrame(t2)
+t2.rename(columns = {0:'compare1'}, inplace = True)
+t2['compare2'] = np.where(t2['compare1'] == 'not sure', test['vaderVsr'], t2['compare1'])
+
+#Remaining 5510 rows still not sure.  Since vader analyzes emoticons better we will use vader as the final tie breaker
+t2['compare3'] = np.where(t2['compare2'] == 'not sure', df3['vader_score_word'], t2['compare2'])
+df3.loc[:,'label'] = t2.loc[:,'compare3']
 ```
 
 - The Data Frame used for EDA and statistical analysis had 270850 rows and 56 columns.
