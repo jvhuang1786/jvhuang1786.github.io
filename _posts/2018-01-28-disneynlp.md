@@ -31,15 +31,21 @@ Python code block:
 
 #### Exploratory Data Analysis
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="500" height="300">
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="1000" height="1600">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="1600" height="2200">
 
 #### Statistics
 
 Here's some inline code `x+y`.
+
+Here's some math:
+
+$$z=x+y$$
+
+You can also put it inline $$z=x+y$$
 
 #### Machine Learning
 
@@ -50,18 +56,5 @@ Here's some inline code `x+y`.
 #### Conclusion
 
 Below is the link to a model you can use for yourself.
-[link](https://github.com/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
 
-
-
-
-
-
-
-
-
-Here's some math:
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
+[Disney NLP Model Start to Finish](https://github.com/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
