@@ -30,11 +30,11 @@ Python code block:
 
 ##### Exploratory Data Analysis
 
-<img src="{{ site.url }}{{ site.baseurl }}images/disneynlp/cinderella.jpg" alt=wordcloud, disney, nlp width="300" height="200" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt=wordcloud, disney, nlp width="300" height="200" />
 
 
 
-<img src="{{ site.url }}{{ site.baseurl }}"images/disneynlp/scatter.gif" alt=scattertext, disney, nlp width="300" height="200" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt=scattertext, disney, nlp width="300" height="200" />
 
 ##### Statistics
 
