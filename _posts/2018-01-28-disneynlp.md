@@ -56,9 +56,13 @@ df['ex_tw_full_text'] = [d.get('full_text') if type(d) == dict else np.nan
 
 #### Exploratory Data Analysis
 
-Below shows a wordcloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
+Below shows a WordCloud visualization of English twitter user data.  The most common words are fuck and annual pass.  One of the most common retweets happening during the collection period was a tweet about someone trying to get in with a fake annual pass.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="200" height="100">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cinderella.jpg" alt="wordcloud, disney, nlp" width="300" height="200">
+
+Things like the experience, lottery tickets for the show One Mans Dream was being talked about the most in the Japanese text WordCloud visualization.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/japanese.png" alt="wordcloud, disney, nlp" width="300" height="200">
 
 
 ScatterText part of the Spacy library was used.  ScatterText allows you to look up certain words and shows you in which document in the corpus the word shows up in.  I compared translated Japanese text to English text.
@@ -71,16 +75,24 @@ ScatterText part of the Spacy library was used.  ScatterText allows you to look 
 
 #### Statistics
 
-Here's some inline code `x+y`.
+The hypothesis:
 
-Here's some math:
+$$𝐻0$$ = English and Japanese Twitter users have the same Text Blob polarity or Vader Compound with their sentiment to the Disney Parks during the Halloween event.
 
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
+                            $$H0: μ 1 = μ 2$$
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="400" height="400">
+$$Ha$$ = English and Japanese twitter users have different Text Blob polarity or Vader Compound with their sentiment towards the Disney Parks during the Halloween event.
+
+                            $$Ha: μ 1 ≠ μ 2$$
+
+
+                            $$alpha = 0.05 $$
+
+
+
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/correlation.jpg" alt="correlation, disney, nlp" width="600" height="600">
 
 
 #### Machine Learning
