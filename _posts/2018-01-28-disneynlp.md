@@ -442,3 +442,8 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 - I collected 2000 tweets for the 2020 CNY about Disney using the above model.  
 - However, understandably since it's another seasonal holiday the model did poorly and scored only 47 percent on accuracy.
 - Halloween data is another holiday compared to Chinese New Year.  But perhaps the Naive Bayes will do better.
+
+[Disney NLP full write up](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
+
+
+[Disney NLP Github link](https://github.com/jvhuang1786/DisTweetCapstone)
