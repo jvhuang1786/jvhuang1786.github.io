@@ -212,7 +212,7 @@ def read_docx_tables(filename, tab_id=None, **kwargs):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/scatter.gif" alt="scattertext, disney, nlp" width="3600" height="4000">
 
-
+[ScatterText Interactive Word Search](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/disScatterText.ipynb)
 
 # Statistics
 
