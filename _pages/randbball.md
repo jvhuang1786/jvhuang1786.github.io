@@ -9,28 +9,29 @@ header:
 
 # NBA Salaries Analysis
 
-* Below is the slide deck
-    * This project was done with R
-    * The goal was to try to find out which statistics contributed most to player salary.
-    * Useful in classifying a range of salaries in contract negotiations
+* This project was done with R
+* The goal was to try to find out which statistics contributed most to player salary.
+* Useful in classifying a range of salaries in contract negotiations
 
-    * Libraries
-        * library(dplyr)
-        * library(ggplot2)
-        * library(ggrepel)
-        * library(directlabels)
-        * library(gridExtra)
-        * library(tidyr)
-        * library(stringr)
-        * library(data.table)
-        * library(rvest)
-        * library(beepr)
+* Libraries
 
-      * Salaries and information was webscrapped from various sources.  
-        * Salaries from HoopsHype
-        * Stats from Patricia Bender
+    * library(dplyr)
+    * library(ggplot2)
+    * library(ggrepel)
+    * library(directlabels)
+    * library(gridExtra)
+    * library(tidyr)
+    * library(stringr)
+    * library(data.table)
+    * library(rvest)
+    * library(beepr)
 
-      * Data was collected for the 1999/2000 to 2017/2018 NBA seasons
+* Salaries and information was webscrapped from various sources.  
+
+    * Salaries from HoopsHype
+    * Stats from Patricia Bender
+
+* Data was collected for the 1999/2000 to 2017/2018 NBA seasons
 
 *Sample Websrapping Code for Salaries*
 
@@ -56,6 +57,8 @@ salary_2016 <- read_html("https://hoopshype.com/salaries/players/2015-2016/") %>
 
 beep("mario")
 ```
+
+* Below is the slide deck
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-01.png" alt="nba, r" width="1000" height="1000">
 
