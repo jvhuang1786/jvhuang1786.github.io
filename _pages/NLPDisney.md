@@ -146,9 +146,53 @@ snow whites scary adventures)', tweet))
 
 # Machine Learning
 
-* Full write up and github link can be found below.
+* Libraries
+    - sklearn
+    - gensim
+    - spacy
+    - nltk
+    - imblearn
 
-[Disney NLP Write UP](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
+* Base model evaluation was done to see which best document term matrix to use.
+
+* There was much more English Positive data used RandomOverSampler to balance the data.
+
+```python
+#Balance the Data
+ros = RandomOverSampler(random_state=77)
+X_resampled_ros_tf, y_resampled_ros_tf = ros.fit_resample(X_train_vect_tf.values, y_train.values)
+print(sorted(Counter(y_resampled_ros_tf).items()))
+```
+* word2vec showed similarity in words
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/wordvec.png" alt="wordcloud, disney, nlp" width="800" height="800">
+
+* model was then tuned using RandomizedSearchCV 1000 max features used to speed up fit time.
+    * xgboost
+    * knn
+    * naive bayes
+    * logisitic regression
+    * random forest
+
+* data was split using train test split to test which one performed the best
+    * random forest and naive bayes were selected
+
+* min_df and max_df and max features was then tested to see which combination using the two models would give the best metrics.
+
+* LDA was done on tweets separated by sentiment to see if topics could be found.
+
+    * Japanese negative
+    * Japanese positive
+    * English negative
+    * English positive
+
+* Full write up, blog post and github link can be found below.
+
+
+[Disney NLP blogpost](https://jvhuang1786.github.io/disneynlp/)
+
+
+[Disney NLP full Write up](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
 
 
 [Disney NLP Github](https://github.com/jvhuang1786/DisTweetCapstone)
