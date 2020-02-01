@@ -9,9 +9,11 @@ header:
 
 # NBA Salaries Analysis
 
-* This project was done with R
+* This project was done with R.
+
 * The goal was to try to find out which statistics contributed most to player salary.
-* Useful in classifying a range of salaries in contract negotiations
+
+* Useful in classifying a range of salaries in contract negotiations for teams and agents.  
 
 * Libraries
 
@@ -28,12 +30,13 @@ header:
 
 * Salaries and information was webscrapped from various sources.  
 
-    * Salaries from HoopsHype
-    * Stats from Patricia Bender
+    * [Salaries from HoopsHype](https://hoopshype.com)
+
+    * [Stats from Patricia Bender](https://www.eskimo.com/~pbender/)
 
 * Data was collected for the 1999/2000 to 2017/2018 NBA seasons
 
-*Sample Websrapping Code for Salaries*
+*Sample Web Scrapping Code for Salaries*
 
 ```r
 salary_2019 <- read_html("https://hoopshype.com/salaries/players/") %>%
