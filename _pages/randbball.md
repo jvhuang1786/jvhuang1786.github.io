@@ -57,70 +57,70 @@ salary_2016 <- read_html("https://hoopshype.com/salaries/players/2015-2016/") %>
 beep("mario")
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-01.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-01.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-02.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-02.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-03.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-03.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-04.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-04.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-05.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-05.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-06.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-06.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-07.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-07.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-08.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-08.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-09.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-09.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-10.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-10.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-11.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-11.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-12.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-12.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-13.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-13.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-14.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-14.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-15.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part1/nba_moneyball_part1-15.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-01.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-01.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-02.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-02.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-03.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-03.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-04.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-04.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-05.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-05.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-06.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-06.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-07.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-07.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-08.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-08.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-09.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-09.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-10.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-10.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-11.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-11.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-12.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-12.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-13.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-13.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-14.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-14.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-15.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-15.png" alt="nba, r" width="1000" height="1000">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-16.png" alt="wordcloud, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/nba_moneyball_part2/nba_moneyball_part2-16.png" alt="nba, r" width="1000" height="1000">
 
 
-[Final Report](https://nbviewer.jupyter.org/github/jvhuang1786/CapStoneSpringBoard/blob/master/Final%20Report/nba_salary_final_report.html)
+[Full NBA salaries report](https://nbviewer.jupyter.org/github/jvhuang1786/CapStoneSpringBoard/blob/master/Final%20Report/nba_salary_final_report.html)
 
 
 [Link to Github](https://github.com/jvhuang1786/CapStoneSpringBoard)
