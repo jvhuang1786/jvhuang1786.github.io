@@ -157,12 +157,35 @@ snow whites scary adventures)', tweet))
 
 * There was much more English Positive data used RandomOverSampler to balance the data.
 
+*Balance data*
+
 ```python
 #Balance the Data
 ros = RandomOverSampler(random_state=77)
 X_resampled_ros_tf, y_resampled_ros_tf = ros.fit_resample(X_train_vect_tf.values, y_train.values)
 print(sorted(Counter(y_resampled_ros_tf).items()))
 ```
+
+* Feature engineering and selection
+    * tweet length
+    * R emotion range
+    * capitalize count
+    * punctuation count
+    * emoji count
+    * hashtag count
+
+* Thought of using box cox transformation to normalize the features however believed central limit theorem should hold.
+
+*Box Cox Transformation*
+```python
+#Box-cox transformation for emoji count
+for i in [1,2,3,4,5]:
+    plt.hist(df3['emoji_count']**(1/i),bins =8)
+    plt.title('Transformation : 1/{}'.format(str(i)))
+    plt.show()
+```python
+
+
 * word2vec showed similarity in words
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/wordvec.png" alt="wordcloud, disney, nlp" width="800" height="800">
@@ -185,6 +208,10 @@ print(sorted(Counter(y_resampled_ros_tf).items()))
     * Japanese positive
     * English negative
     * English positive
+
+*Dominant word per document English Positive*
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/dominant.png" alt="wordcloud, disney, nlp" width="800" height="800">
 
 * Full write up, blog post and github link can be found below.
 
