@@ -12,16 +12,19 @@ header:
 ## Cleaning and Wrangling
 
 * Libraries
-- Tweepy
-- re
-- emoji
-- numpy
-- bs4
-- pandas
-- document
-- string
+  - Tweepy
+  - re
+  - emoji
+  - numpy
+  - bs4
+  - pandas
+  - document
+  - string
 
-* Twitter sentiment analysis was done for both the Disney Parks.  To collect data I used the Twitter API and collected livestream tweets.  Collection was done for the Halloween seasonal 2019 and Chinese New Year 2020 events at both Tokyo Disney Resort and Anaheim Disney Resort.  
+* Twitter sentiment analysis was done for both the Disney Parks.  To collect data I used the Twitter API and collected livestream tweets.  Collection was done for the Halloween seasonal 2019 and Chinese New Year 2020 events at both Tokyo Disney Resort and Anaheim Disney Resort.
+
+  * CNY data collection period Jan 28th - Feb 2nd 2020
+  * Halloween data collection period Sept 24th - Nov 1st 2019
 
 * To clean and structure the data the tweepy library was used. Regular expression was used to clean the data and retrieve hashtags,links, mentions and emojis
 
@@ -46,17 +49,103 @@ The following libraries/modules were used for sentiment labeling.
 ## Exploratory Data Analysis
 
 * Libraries
-- seaborn
-- matplotlib
-- bokeh
-- plotly
-- Spacy ScatterText
-- Folium
-- Basemap
-- wordcloud
+  - seaborn
+  - matplotlib
+  - bokeh
+  - plotly
+  - Spacy ScatterText
+  - Folium
+  - Basemap
+  - wordcloud
+  - Counter
+
+* WordCloud was generated to visualize the top 1000 words.
+
+* Basemap and Folium interactive map was created to visualize top Disney influencer location.
+
+  * Geocoder was used to retrieve longitude and latitude.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/basemap.png" alt="wordcloud, disney, nlp" width="800" height="800">
+
+[Folium Interactive Map](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/twittermap.html)
+
+* Seaborn was used to visualize if people tweeted more on the weekend and weekday.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/tweetday.png" alt="wordcloud, disney, nlp" width="800" height="800">
+
+* Bokeh was used to visualize hashtag, emoji and mention count. Also, what device people used.
+  * Noticable tweet bots found.
+  * Was also used to count words in countvectorizer document term matrix.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/source.gif" alt="wordcloud, disney, nlp" width="800" height="800">
+
+* Plotly was used to visualize tweet peaks on certain days of the collection period.
+
+* ScatterText used to visualize word frequency accross Japanese and English documents.
+
+[ScatterText Interactive Word Search](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/disScatterText.ipynb)
+
+#Statistics
+
+* Libraries
+  * scipy.stats
+  * nltk
+  * textblob
+  * asari
+
+* Mean, median and mode were after finding the compound score text using NLTK Vader.
+
+*Vader Compound Score*
+
+``` python
+def vader_compound(sentence):
+    score = analyser.polarity_scores(sentence)
+    return score['compound']
+```
+*Text Blob Polarity*
+
+``` python
+pol = lambda x: TextBlob(x).sentiment.polarity
+tweets['polarity_tb'] = tweets['clean_text_hashtag_emoji'].apply(pol)
+```
+
+* Used regular expression to classify from the text which parks were being talked about.
+  * Certain twitter users were mainly one parks influencers included them in search.
+
+*Tokyo Disney Search*
+
+``` python
+tweets['disneyTokyo'] = tweets['original_clean_text_hashtag_emoji_mentions'].apply(lambda tweet: word_in_text(r'(disneysea|\
+disneytokyo|disneytokyoresort|tokyodisney|tokyodisneyresort|tokyodisneyland|tokyo disneyland|\
+tdr_info|東京ディズニーランド|ディズニーランド|東京ディズニーシー|ズニーシー|tdr_now|tdr_md|ディズニーランド|\
+tokyo|japan|スプーキーbooパレード|ディズニーランド|TDR|tora0422|スペースマウンテン|ドナルド|マイロ|ミニ|disney_04150420|\
+spookybooparade|仮装|カストーディアルアート|パーク|白雪姫|ディズニー|キッズ|コイン|tokyo trip|シー|tds_010904|hinaarare_duffy\
+ダッフィー|disney_hokuto|linepay_jp|mikko_20100518|dtr|taa235|tyako_tako_tako|rinarina61423|jr_mmk0620|\
+tokyo disney|maihama_line|andrew_minnie_|新幹線|ちゃん|ガチャ|スカイウォーカ|ハロウィン|dontike36|でたよ|舞浜|t_bisco|\
+edama_d|moonstar_y_h|tommmdd|2nd887|bom_schedule|ngntrtr|ワンマンズ|fp|doppo_miku|インディージョーンズ|リゾラ|\
+ジャングルクルーズ|鹿児島|トラッシュカン|disney6942|noon123hii|h_meika|katsudonminnie|ファストパス発行|natch000|• tokyo|\
+花壇|ミッキ|motorsports0908|mjlove_panda|minnie24pre|_disney_mania_|satosan1118mm|海|saiga_d_mickey|koutaman7|\
+snow whites scary adventures)', tweet))
+```
+
+*Sentiment and Parks*
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/retweet.png" alt="wordcloud, disney, nlp" width="800" height="800">
+
+* Mean difference test was done as well as  Mann-Whitney U Test non-parametric distribution test.
+  * Test on Japanese vs English users
+  * Toyko Disney Resort vs Anaheim Disney Resorts
+
+* correlation was visualized
+
+*Correlation Retweet and Favorite*
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/correlation.png" alt="wordcloud, disney, nlp" width="800" height="800">
 
 
+# Machine Learning
 
+* Full write up and github link can be found below. 
 
 [Disney NLP Write UP](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
 
