@@ -35,7 +35,7 @@ header:
 
 * To do a comparable analysis of Japanese text and English text, word and google translation service was used.  After a text sentiment analyzer was applied to the text data.
 
-The following libraries/modules were used for sentiment labeling.
+* The following libraries/modules were used for sentiment labeling.
 
     * NLTK Vader
     * Text Blob
@@ -177,13 +177,14 @@ print(sorted(Counter(y_resampled_ros_tf).items()))
 * Thought of using box cox transformation to normalize the features however believed central limit theorem should hold.
 
 *Box Cox Transformation*
+
 ```python
 #Box-cox transformation for emoji count
 for i in [1,2,3,4,5]:
     plt.hist(df3['emoji_count']**(1/i),bins =8)
     plt.title('Transformation : 1/{}'.format(str(i)))
     plt.show()
-```python
+```
 
 
 * word2vec showed similarity in words
