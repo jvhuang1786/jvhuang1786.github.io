@@ -11,9 +11,19 @@ header:
 
 ## Cleaning and Wrangling
 
+* Libraries
+- Tweepy
+- re
+- emoji
+- numpy
+- bs4
+- pandas
+- document
+- string
+
 * Twitter sentiment analysis was done for both the Disney Parks.  To collect data I used the Twitter API and collected livestream tweets.  Collection was done for the Halloween seasonal 2019 and Chinese New Year 2020 events at both Tokyo Disney Resort and Anaheim Disney Resort.  
 
-* To clean and structure the data the tweepy library was used.
+* To clean and structure the data the tweepy library was used. Regular expression was used to clean the data and retrieve hashtags,links, mentions and emojis
 
 1. Nested dictionaries were pulled out to consolidate the text.
 2. Date time was formatted
@@ -33,7 +43,19 @@ The following libraries/modules were used for sentiment labeling.
 
 * Geocoder was used to add back in longitude and latitude data for user location.  
 
-## Exploratory Data Analysis 
+## Exploratory Data Analysis
+
+* Libraries
+- seaborn
+- matplotlib
+- bokeh
+- plotly
+- Spacy ScatterText
+- Folium
+- Basemap
+- wordcloud
+
+
 
 
 [Disney NLP Write UP](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
