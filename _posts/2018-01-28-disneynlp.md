@@ -12,7 +12,7 @@ mathjax: "true"
 
 - The project was inspired by my summer trip to Tokyo Disneyland.  Researching guides on youtube there was a huge number of Youtubers, people on reddit, twitter and other forms of media claiming Tokyo Disney Resort specifically Tokyo Disney Sea was the best Disney park.  The park that would make Walt Disney proud.
 
-- The business use of doing NLP for both Disney resorts would be help Imagineers come up with new decorative themes for the park during seasonal events.  By seeing trends of what people liked and disliked it can help relay information to Disney's business partners of what worked and didn't work.
+- The business use of doing NLP for both Disney resorts would be to help Imagineers come up with new decorative themes for the park during seasonal events.  By seeing trends of what people liked and disliked it can help relay information to Disney's business partners of what worked and didn't work.
 
 - So what is an Imagineer you might ask?
 
@@ -482,9 +482,17 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 *CNY Confusion Matrix*
 <img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cny.png" alt="r, disney, nlp" width="800" height="800">
 
-- I collected 2000 tweets for the 2020 CNY about Disney using the above model.  
-- However, understandably since it's another seasonal holiday the model did poorly and scored only 47 percent on accuracy.
-- Halloween data is another holiday compared to Chinese New Year.  But perhaps the Naive Bayes will do better.
+- I collected 26000 tweets for the 2020 CNY about Disney using the above model.
+
+- However, understandably since it's another seasonal holiday
+    - The random forest model scored 46 percent accuracy
+    - The multinomial bayes classifier scored only 33 percent accuracy
+
+- Halloween data is another holiday compared to Chinese New Year. Therefore, words used during the tweets would be different. Furthermore, 3 main events were happening around this time.
+
+    - Kobe's death
+    - Coronavirus
+    - Super Bowl 
 
 [Disney NLP full write up](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
 
