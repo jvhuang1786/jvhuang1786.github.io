@@ -480,7 +480,7 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 [Disney NLP Model Start to Finish](https://nbviewer.jupyter.org/github/jvhuang1786/DisTweetCapstone/blob/master/dis_model_production.ipynb)
 
 *CNY Confusion Matrix*
-<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cny.png" alt="r, disney, nlp" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/images/disneynlp/cnyupdat.png" alt="r, disney, nlp" width="800" height="800">
 
 - I collected 26000 tweets for the 2020 CNY about Disney using the above model.
 
@@ -492,7 +492,7 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 
     - Kobe's death
     - Coronavirus
-    - Super Bowl 
+    - Super Bowl
 
 [Disney NLP full write up](https://docs.google.com/document/d/1pCiP9xJWBGO8QNteLKqXBVSPj5HfoKziGyEEvUe_xvY/edit)
 
