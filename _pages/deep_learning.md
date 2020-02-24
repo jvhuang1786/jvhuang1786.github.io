@@ -17,8 +17,24 @@ header:
 
   * Deep convolutional GAN was also experimented on.  Will publish more as I progress further.
 
+  * Goal is to try to produce full body images. Looking at LOL data and monster hunter hunter data.
+
+**Style GAN 2.0**
+
 <p align="center">
 <img src="{{ site.url }}{{ site.baseurl }}/images/face.gif" alt="text, previz, deeplearning" width="1500" height="1500">
+</p>
+
+**DCGAN 10000 Steps**
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/dcganface.gif" alt="text, previz, deeplearning" width="1500" height="1500">
+</p>
+
+**DCGAN 100000 Steps**
+
+<p align="center">
+<img src="{{ site.url }}{{ site.baseurl }}/images/100000.png" alt="text, previz, deeplearning" width="1500" height="1500">
 </p>
 
 {% include base_path %}
