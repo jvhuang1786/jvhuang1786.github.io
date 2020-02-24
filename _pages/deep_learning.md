@@ -7,10 +7,18 @@ header:
   image: "/images/culture.png"
 ---
 
-# Currently Working on Deep Learning Project!
+# Generative Adversarial Networks
+
+## Intro
+
+  * The goal is to use neural networks to try to generate concept art.  
+
+  * Below is testing on NVIDIA style GAN 2.0.  
+
+  * Deep convolutional GAN was also experimented on.  Will publish more as I progress further.
 
 <p align="center">
-<img src="{{ site.url }}{{ site.baseurl }}/images/wip.png" alt="text, previz, deeplearning" width="1500" height="1500">
+<img src="{{ site.url }}{{ site.baseurl }}/images/face.gif" alt="text, previz, deeplearning" width="1500" height="1500">
 </p>
 
 {% include base_path %}
