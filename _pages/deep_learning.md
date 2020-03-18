@@ -181,7 +181,7 @@ header:
   * Full write up, blog post and github link can be found below.
 
 
-  [MHXX GAN Blog post](https://jvhuang1786.github.io/disneynlp/)
+  [MHXX GAN Blog post](https://jvhuang1786.github.io/MHXXGAN/)
 
 
   [MHXX GAN Write Up](https://docs.google.com/document/d/1pgZfQyXih_lmArl-OqA81ylXD48rHplDr4idt_k2seQ/edit)
