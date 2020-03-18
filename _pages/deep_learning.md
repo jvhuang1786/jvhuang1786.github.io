@@ -14,6 +14,8 @@ header:
   * Concept design can take time. The goal of this project is to see if we can
   make the creative process more efficient.  
 
+<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/gan.png" alt="GAN, capcom, mhxx" width="800" height="800">
+
 
 ## Compute Requirements
 
@@ -56,6 +58,7 @@ header:
       7. Use fastai to check if it can pass through Nvidia's dataset_tool.py
       8. Changed to tfrecords.     
 
+<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/augment.png" alt="GAN, capcom, mhxx" width="800" height="800">
 
 ## Feature Map Exploration
 
@@ -85,6 +88,9 @@ header:
       - PIL
       - keras
       - matplotlib
+
+
+<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/dcgan.png" alt="GAN, capcom, mhxx" width="800" height="800">
 
   * DCGAN was a quick way to visualize our image datasets.
 
@@ -131,6 +137,8 @@ header:
     - copy
     - metrics
 
+<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/sgan.png" alt="GAN, capcom, mhxx" width="800" height="800">
+
 * First trained the anime face model using the preset hyperparameters.
 
 <img src="{{ site.url }}{{ site.baseurl }}/mhxximg/animeface.gif" alt="GAN, capcom, mhxx" width="800" height="800">
@@ -167,7 +175,7 @@ header:
     - dnnlib
     - pickle
 
-<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/vidstitch.png" alt="GAN, capcom, mhxx" width="800" height="800">
+<img src="{{ site.url }}{{ site.baseurl }}/mhxximg/vidstich.png" alt="GAN, capcom, mhxx" width="800" height="800">
 
 
   * Full write up, blog post and github link can be found below.
