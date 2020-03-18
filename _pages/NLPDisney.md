@@ -224,14 +224,3 @@ for i in [1,2,3,4,5]:
 
 
 [Disney NLP Github](https://github.com/jvhuang1786/DisTweetCapstone)
-
-{% include base_path %}
-{% include group-by-array collection=site.posts field="tags" %}
-
-{% for tag in group_names %}
-  {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag| slugify }}" class ="archive_subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endfor %}
