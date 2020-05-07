@@ -6,5 +6,7 @@ main:
     url: /disney_nlp/
   - title: "Deep Learning"
     url: /deep_learning/
+  - title: "Time Series"
+    url: /timeseries_stockpred/
   - title: "Basketball Salaries"
     url: /nba_salaries/
