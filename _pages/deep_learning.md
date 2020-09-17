@@ -7,7 +7,7 @@ header:
   image: "/images/culture.png"
 ---
 
-## Generative Adversarial Networks Improving the creation Pipeline
+# Generative Adversarial Networks Improving the creation Pipeline
 
   * Concept design can take time. The goal of this project is to see if we can
   make the creative process more efficient.  

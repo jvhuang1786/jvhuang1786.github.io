@@ -7,7 +7,7 @@ header:
   image: "/images/warrior.png"
 ---
 
-# NBA Salaries Analysis
+## NBA Salaries Analysis
 
 * This project was done with R.
 

@@ -7,7 +7,7 @@ header:
   image: "/images/berttimeseries/logo.png"
 ---
 
-# Can we use Elon's Tweets to make a better Multivariate Time Series Model?
+## Can we use Elon's Tweets to make a better Multivariate Time Series Model?
 
 ### Libraries
 
@@ -90,7 +90,7 @@ header:
   * Instead of classifying as type and sentiment separate them in bins of gains and losses based on the text.
 <img src="{{ site.url }}{{ site.baseurl }}/images/berttimeseries/13.png" alt="timeseries, tesla, nlp" width="800" height="800">
 
-* More information and details on the write up can be found in the webapp. Github link also below: 
+* More information and details on the write up can be found in the webapp. Github link also below:
 
 [Tesla Web App](https://elon-tesla.herokuapp.com)
 
