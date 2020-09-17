@@ -4,7 +4,7 @@ permalink: /GANS/
 title: "MHXX and Anime GANS"
 author_profile: true
 header:
-  image: "/images/culture.png"
+  image: "/mhxximg/title1.png"
 ---
 
 # Generative Adversarial Networks Improving the creation Pipeline

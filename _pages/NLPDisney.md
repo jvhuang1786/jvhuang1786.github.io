@@ -4,7 +4,7 @@ permalink: /disney_nlp/
 title: "Disney Parks Twitter NLP"
 author_profile: true
 header:
-  image: "/images/sf.jpg"
+  image: "/images/article.png"
 ---
 
 ## NLP Disney Parks brief introduction
