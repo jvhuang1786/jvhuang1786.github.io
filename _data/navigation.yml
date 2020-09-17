@@ -9,4 +9,6 @@ main:
   - title: "Time Series"
     url: /timeseries_stockpred/
   - title: "Basketball Salaries"
-    url: /nba_salaries/
+    url: /nba_salaries
+  - title: "Anime Recommender"
+    url: /anime_recommender
