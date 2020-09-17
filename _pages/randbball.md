@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /nba_salaries/
-title: "Basketball Salaries"
+title: "Basketball Salaries looking at statistical trends"
 author_profile: true
 header:
   image: "/images/warrior.png"

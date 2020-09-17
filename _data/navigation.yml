@@ -1,14 +1,14 @@
 # main links
 main:
-  - title: "Natural Language Processing"
+  - title: "NLP"
     url: /disney_nlp/
-  - title: "Generative Advesarial Networks"
+  - title: "GANS"
     url: /GANS/
   - title: "Time Series"
     url: /timeseries_stockpred/
-  - title: "Basketball Salaries"
+  - title: "BBALL Salaries"
     url: /nba_salaries
-  - title: "Anime Recommender"
+  - title: "Recommender"
     url: /anime_recommender
   - title: "About"
     url: /about/

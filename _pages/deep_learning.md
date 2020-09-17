@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /GANS/
-title: "Generative Adversarial Networks"
+title: "MHXX and Anime GANS"
 author_profile: true
 header:
   image: "/images/culture.png"
