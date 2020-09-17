@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Natural Language Processing"
     url: /disney_nlp/
-  - title: "Deep Learning"
-    url: /deep_learning/
+  - title: "Generative Advesarial Networks"
+    url: /GANS/
   - title: "Time Series"
     url: /timeseries_stockpred/
   - title: "Basketball Salaries"

@@ -1,7 +1,7 @@
 ---
 layout: archive
-permalink: /deep_learning/
-title: "Deep Learning"
+permalink: /GANS/
+title: "Generative Adversarial Networks"
 author_profile: true
 header:
   image: "/images/culture.png"
