@@ -8,4 +8,4 @@ header:
 ---
 
 # Coming SOON!
-# Creating an anime webapp recommender using information from Crunchyroll and funimation and looking to launch on AWS sagemaker. 
+# Creating an anime webapp recommender using information from Crunchyroll and funimation and looking to launch on AWS sagemaker.
