@@ -4,7 +4,7 @@ main:
     url: /about/
   - title: "DisNLP"
     url: /disney_nlp/
-  - title: "MHGANS"
+  - title: "MHGAN"
     url: /GANS/
   - title: "ElonTimeSeries"
     url: /timeseries_stockpred/
