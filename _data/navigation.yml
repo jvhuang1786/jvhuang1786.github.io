@@ -8,11 +8,11 @@ main:
     url: /GANS/
   - title: "ElonTimeSeries"
     url: /timeseries_stockpred/
+  - title: "hackTheBay"
+    url: /hack_the_bay/
   - title: "NBASalaries"
     url: /nba_salaries
   - title: "AnimeRec"
     url: /anime_recommender
-  - title: "hackTheBay"
-    url: /hack_the_bay/
   - title: "PekingOpera"
     url: /peking_opera/
