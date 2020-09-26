@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "About"
+    url: /about/
   - title: "DisNLP"
     url: /disney_nlp/
   - title: "MHGANS"
@@ -14,5 +16,3 @@ main:
     url: /hack_the_bay/
   - title: "PekingOpera"
     url: /peking_opera/
-  - title: "About"
-    url: /about/
