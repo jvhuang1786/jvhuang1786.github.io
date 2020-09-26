@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "hackTheBay"
-    url: /hack_the_bay/
   - title: "DisNLP"
     url: /disney_nlp/
   - title: "MHGANS"
@@ -12,5 +10,9 @@ main:
     url: /nba_salaries
   - title: "AnimeRec"
     url: /anime_recommender
+  - title: "hackTheBay"
+    url: /hack_the_bay/
+  - title: "PekingOpera"
+    url: /peking_opera/
   - title: "About"
     url: /about/
