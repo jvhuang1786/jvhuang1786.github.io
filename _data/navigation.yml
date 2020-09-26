@@ -13,6 +13,6 @@ main:
   - title: "NBASalaries"
     url: /nba_salaries
   - title: "AnimeRec"
-    url: /anime_recommender
+    url: /anime_recommender/
   - title: "PekingOpera"
     url: /peking_opera/
