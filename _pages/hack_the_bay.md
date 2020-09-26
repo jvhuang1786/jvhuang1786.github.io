@@ -4,7 +4,7 @@ permalink: /hack_the_bay/
 title: "Booze Allen Hamilton Hackathon"
 author_profile: true
 header:
-  image: "/images/anime/logo1.png"
+  image: "/images/hackthebay/hack.png"
 ---
 ## Total Nitrogen Prediction of the Chesapeake Bay  
 
