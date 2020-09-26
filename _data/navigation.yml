@@ -1,14 +1,16 @@
 # main links
 main:
-  - title: "NLP"
+  - title: "hackTheBay"
+    url: /hack_the_bay/
+  - title: "DisNLP"
     url: /disney_nlp/
-  - title: "GANS"
+  - title: "MHGANS"
     url: /GANS/
-  - title: "Time Series"
+  - title: "ElonTimeSeries"
     url: /timeseries_stockpred/
-  - title: "BBALL Salaries"
+  - title: "NBASalaries"
     url: /nba_salaries
-  - title: "Recommender"
+  - title: "AnimeRec"
     url: /anime_recommender
   - title: "About"
     url: /about/
