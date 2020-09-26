@@ -12,7 +12,7 @@ main:
     url: /hack_the_bay/
   - title: "NBASalaries"
     url: /nba_salaries
-  - title: "AnimeRec"
+  - title: "AnimeRecommender"
     url: /anime_recommender/
   - title: "PekingOpera"
     url: /peking_opera/
